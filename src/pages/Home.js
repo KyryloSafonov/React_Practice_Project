@@ -13,8 +13,9 @@ export const Home = () => {
         try{
             setIsLoading(true)
             const {results, page, total_page, total_results} = await moviesService.getMovies();
+            console.log(results);
 
-        setMoviesList(results);
+            setMoviesList(results);
         }catch (e) {
             console.error(e);
 
@@ -38,8 +39,6 @@ export const Home = () => {
     return(
         <div>
             {isLoading || isLoading === null ? renderLoadingIndicator(): <FilmList items={moviesList}/>}
-
-            <FilmList/>
         </div>
 
     )
