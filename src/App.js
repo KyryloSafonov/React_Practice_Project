@@ -1,15 +1,18 @@
-import React, {Component} from 'react';
-import {moviesService} from "./services";
+import React from 'react';
+import {BaseLayout} from './layout'
+import {Home} from "./pages";
+import './App.css';
 
-moviesService.getMovies().then(console.log)
-class App extends Component {
-  render() {
+// todo show error handler for react components
+// todo notifications
+
+function App()  {
+
     return (
-        <div>
-          
-        </div>
+        <BaseLayout>
+            <Home/>
+        </BaseLayout>
     );
-  }
 }
 
 export default App;
