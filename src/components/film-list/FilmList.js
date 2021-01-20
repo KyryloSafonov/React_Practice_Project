@@ -1,12 +1,17 @@
 import React from "react";
+import {FilmItem} from "../film-item";
+import styles from "./FilmList.module.css"
 
 
 export const FilmList = ({items}) => {
     console.log(items, 'from FilmList');
     return (
-         <div>
+         <div className={styles.listWrapper}>
             {
-              items.map(({original_title}) => <h2>{original_title}</h2>)
+              items.map(item => (
+                  <div className={styles.itemWrapper} key={item.id}>
+                  <FilmItem  props={item}/>
+              </div>))
             }
         </div>
     )

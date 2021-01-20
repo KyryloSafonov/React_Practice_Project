@@ -9,6 +9,7 @@ main{
   flex: 1;
   padding: 20px;
   position: relative;
+  overflow-y: auto;
 }
 
 header,footer{
