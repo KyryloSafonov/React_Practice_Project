@@ -19,10 +19,14 @@ export const MovieDetails = () => {
     },[])
     return(
         <div>
-            <h1>{filmDetails.original_title}</h1>
+            {filmDetails?(
+                <div>
+                <h1>{filmDetails.original_title}</h1>
             <h2>{filmDetails.genres.map(el => <span key={el.id}>{el.name}</span>)}</h2>
-            {/*<h3>{filmDetails.}</h3>*/}
+                    <img src={`https://image.tmdb.org/t/p/w200${filmDetails.poster_path}`} alt=""/>
             <p>{filmDetails.overview}</p>
+                </div>
+            ):''}
         </div>
     )
 }

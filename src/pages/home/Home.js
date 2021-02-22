@@ -74,7 +74,7 @@ export const Home = () => {
     }
 
     const onFilmClick = (film) => {
-        history.push(`/movie/${film}`)
+        history.push(`/movie/${film.id}`)
     }
 
     return(
